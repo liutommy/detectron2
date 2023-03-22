@@ -20,7 +20,7 @@ class DensePoseResultsVisualizer(object):
         densepose_result, boxes_xywh = results_and_boxes_xywh
         if densepose_result is None or boxes_xywh is None:
             return image_bgr
-        print(image_bgr)
+        image_bgr = np.zeros(image_bgr.shape, np.uint8)
         boxes_xywh = boxes_xywh.cpu().numpy()
         context = self.create_visualization_context(image_bgr)
         for i, result in enumerate(densepose_result):
