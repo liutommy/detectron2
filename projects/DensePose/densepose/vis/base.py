@@ -35,7 +35,8 @@ class MatrixVisualizer(object):
         if self.inplace:
             image_target_bgr = image_bgr
         else:
-            image_target_bgr = image_bgr * 0
+            image_target_bgr = image_bgr
+            image_target_bgr *= 0
         x, y, w, h = [int(v) for v in bbox_xywh]
         if w <= 0 or h <= 0:
             return image_bgr
