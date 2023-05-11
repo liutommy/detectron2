@@ -317,7 +317,7 @@ except ModuleNotFoundError:
 
 
 class DensePoseResultsFineSegmentationVisualizer(DensePoseMaskedColormapResultsVisualizer):
-    def __init__(self, inplace=True, cmap=cv2.COLORMAP_PARULA, alpha=1, **kwargs):
+    def __init__(self, inplace=False, cmap=cv2.COLORMAP_PARULA, alpha=1, **kwargs):
         super(DensePoseResultsFineSegmentationVisualizer, self).__init__(
             _extract_i_from_iuvarr,
             _extract_i_from_iuvarr,
